@@ -1,0 +1,9 @@
+D:\Demos\AuthWithJWTApp\AuthWithJWTApp\bin\Debug\netcoreapp1.1\AuthWithJWTApp.deps.json
+D:\Demos\AuthWithJWTApp\AuthWithJWTApp\bin\Debug\netcoreapp1.1\AuthWithJWTApp.runtimeconfig.json
+D:\Demos\AuthWithJWTApp\AuthWithJWTApp\bin\Debug\netcoreapp1.1\AuthWithJWTApp.runtimeconfig.dev.json
+D:\Demos\AuthWithJWTApp\AuthWithJWTApp\bin\Debug\netcoreapp1.1\AuthWithJWTApp.dll
+D:\Demos\AuthWithJWTApp\AuthWithJWTApp\bin\Debug\netcoreapp1.1\AuthWithJWTApp.pdb
+D:\Demos\AuthWithJWTApp\AuthWithJWTApp\obj\Debug\netcoreapp1.1\AuthWithJWTApp.csprojResolveAssemblyReference.cache
+D:\Demos\AuthWithJWTApp\AuthWithJWTApp\obj\Debug\netcoreapp1.1\AuthWithJWTApp.AssemblyInfo.cs
+D:\Demos\AuthWithJWTApp\AuthWithJWTApp\obj\Debug\netcoreapp1.1\AuthWithJWTApp.dll
+D:\Demos\AuthWithJWTApp\AuthWithJWTApp\obj\Debug\netcoreapp1.1\AuthWithJWTApp.pdb
