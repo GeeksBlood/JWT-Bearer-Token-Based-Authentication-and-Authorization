@@ -1,5 +1,7 @@
 ﻿using AuthWithJWTApp.JWT;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Security.Claims;
@@ -14,9 +16,10 @@ namespace AuthWithJWTApp
         // The secret key every token will be signed with.
         // Keep this safe on the server!
         private static readonly string secretKey = "mysupersecret_secretkey!123";
-
+        private IApplicationBuilder _app;
         private void ConfigureAuth(IApplicationBuilder app)
         {
+            _app = app;
             var signingKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(secretKey));
 
             app.UseSimpleTokenProvider(new TokenProviderOptions
@@ -70,6 +73,25 @@ namespace AuthWithJWTApp
 
         private Task<ClaimsIdentity> GetIdentity(string username, string password)
         {
+            //using (var serviceScope = _app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
+            //{
+            //    var signInManager = serviceScope.ServiceProvider.GetService<SignInManager<ApplicationUserDto>>();
+            //    var userManager = serviceScope.ServiceProvider.GetService<UserManager<ApplicationUserDto>>();
+
+            //    if (username != null && password != null)
+            //    {
+            //        var user = userManager.FindByNameAsync(username).Result;
+            //        var result = signInManager.PasswordSignInAsync(username, password, false, lockoutOnFailure: false).Result;
+            //        if (result.Succeeded)
+            //        {
+            //            return Task.FromResult(new ClaimsIdentity(new GenericIdentity(username, "Token"), new Claim[] { }));
+            //        }
+            //    }
+
+            //    // Credentials are invalid, or account doesn't exist
+            //    return Task.FromResult<ClaimsIdentity>(null);
+            //}
+
             // Don't do this in production, obviously!
             if (username == "TEST" || username == "TEST1" && password == "TEST123")
             {
